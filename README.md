@@ -1,3 +1,0 @@
-# readmePublish
-* adsfa
-* asdfasd
