@@ -16,7 +16,7 @@
 
 // Step-0: Read a file........................................................
 const fs = require("fs");
-const indexhtml = fs.readFileSync("./Template/index.html", "utf-8");
+const indexhtml = fs.readFileSync("./index.html", "utf-8");
 const contacthtml = fs.readFileSync("./Template/contact.html", "utf-8");
 const abouthtml = fs.readFileSync("./Template/about.html", "utf-8");
 const producthtml = fs.readFileSync("./Template/product.html", "utf-8");
