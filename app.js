@@ -45,7 +45,7 @@ const server = http.createServer((request, response) => {
 
 // STEP-2: Start the server................................................
 const port = 9000;
-const hname = "127.0.0.1";
+const hname = "https://rickey-alok.github.io/My-JavaScript-Project";
 
 server.listen(port, hname, () => {
   console.log("server has started");
