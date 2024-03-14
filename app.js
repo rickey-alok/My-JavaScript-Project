@@ -17,6 +17,7 @@
 // Step-0: Read a file........................................................
 const fs = require("fs");
 const indexhtml = fs.readFileSync("./index.html", "utf-8");
+const homehtml = fs.readFileSync("./Template/home.html", "utf-8");
 const contacthtml = fs.readFileSync("./Template/contact.html", "utf-8");
 const abouthtml = fs.readFileSync("./Template/about.html", "utf-8");
 const producthtml = fs.readFileSync("./Template/product.html", "utf-8");
@@ -28,13 +29,13 @@ const { hostname } = require("os");
 const server = http.createServer((request, response) => {
   let path = request.url;
   if (path === "/" || path.toLocaleLowerCase() === "/home") {
-    response.end(indexhtml.replace("{{%CONTENT%}}", "Home"));
+    response.end(indexhtml.replace("{{%CONTENT%}}", homehtml));
   } else if (path.toLocaleLowerCase() === "/about") {
-    response.end(indexhtml.replace("{{%CONTENT%}}", "about"));
+    response.end(indexhtml.replace("{{%CONTENT%}}", abouthtml));
   } else if (path.toLocaleLowerCase() === "/contact") {
-    response.end(indexhtml.replace("{{%CONTENT%}}", "contact"));
+    response.end(indexhtml.replace("{{%CONTENT%}}", contacthtml));
   } else if (path.toLocaleLowerCase() === "/products") {
-    response.end(indexhtml.replace("{{%CONTENT%}}", "products"));
+    response.end(indexhtml.replace("{{%CONTENT%}}", producthtml));
   } else {
     response.end(
       indexhtml.replace("{{%CONTENT%}}", "Error 404: Page not found")
@@ -51,3 +52,5 @@ server.listen(port, hname, () => {
 });
 
 // STEP-3: Create Routing................................................
+
+// video ended at #16
